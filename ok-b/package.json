@@ -1,0 +1,22 @@
+{
+  "name": "ok-b",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "dependencies": {
+    "@koa/cors": "^5.0.0",
+    "ioredis": "^5.5.0",
+    "koa": "^2.15.4",
+    "koa-bodyparser": "^4.4.1",
+    "mysql2": "^3.12.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-koa": "^0.0.1"
+  }
+}
