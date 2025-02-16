@@ -1,12 +1,18 @@
 const Koa = require('koa');
+const bodyParser = require('koa-bodyparser');
+const cors = require('@koa/cors');
+const userRoutes = require('./routes/userRoutes');
+
 const app = new Koa();
 
-// 定义一个中间件，处理所有请求
-app.use(async (ctx) => {
-    ctx.body = 'Hello, Koa Backend!';
-});
+// 使用中间件
+app.use(cors());
+app.use(bodyParser());
 
-// 启动服务器，监听 3000 端口
+// 使用路由
+app.use(userRoutes.routes());
+app.use(userRoutes.allowedMethods());
+
 const port = 3000;
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
